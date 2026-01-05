@@ -107,7 +107,7 @@ input {
 }
 @media (min-width: 1000px) {
   .form-data {
-    max-width: 800px;
+    max-width: 940px;
     padding: 24px 32px;
     display: flex;
     align-items: center;
