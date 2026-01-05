@@ -80,6 +80,7 @@ input {
   margin-bottom: 16px;
   border-radius: 10px;
   border: 1px solid var(--grey-color);
+  transition: all 0.4s ease-in-out;
 }
 input:focus {
   outline: none;
@@ -95,6 +96,7 @@ input:focus {
   border-radius: 10px;
   border: none;
   outline: none;
+  transition: all 0.4s ease-in-out;
 }
 
 @media (min-width: 650px) {
@@ -127,7 +129,7 @@ input:focus {
     align-items: center;
     justify-content: center;
   }
-  input:focus ~ button {
+  input:focus ~ .btn {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
   }
 }
