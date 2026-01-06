@@ -1,11 +1,5 @@
 "use strict";
 
-// document.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (!e.target.id === "email--input") return;
-//   handleSubmit();
-// });
-
 const form = document.getElementById("form");
 
 form.addEventListener("submit", handleSubmit);
