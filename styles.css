@@ -17,7 +17,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--grey-color);
   padding: 20px;
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -110,7 +109,14 @@ label {
   border-radius: 10px;
   border: none;
   outline: none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  opacity: 0.9;
 }
 /* success notification */
 .notification-icon {
@@ -203,6 +209,11 @@ label {
 
   .input-field:focus ~ .btn {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
+  }
+
+  .btn-notification:active {
+    background-image: linear-gradient(to right, #ff6a3a, #ff527b);
+    box-shadow: 12px 12px 12px #ff527b;
   }
 }
 
