@@ -17,13 +17,21 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--grey-color);
   padding: 20px;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.form-data {
+.news-letter-container {
   width: 100%;
   max-width: 500;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   margin: 50px auto;
+  position: relative;
 }
+
 img {
   width: 100%;
   display: block;
@@ -51,7 +59,8 @@ li {
   gap: 16px;
   line-height: 1.5;
 }
-.title {
+.title,
+.notification-title {
   font-size: clamp(40px, calc(2vw + 36px), 3.5rem);
   color: var(--darkBlue-color);
 }
@@ -65,13 +74,17 @@ li {
   margin-bottom: 40px;
 }
 label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   color: var(--darkBlue-color);
   font-weight: 700;
   margin-bottom: 8px;
 }
-input {
+.error-message {
+  color: #ff527b;
+}
+.input-field {
   width: 100%;
   padding: 20px;
   line-height: 1.5;
@@ -82,11 +95,12 @@ input {
   border: 1px solid var(--grey-color);
   transition: all 0.4s ease-in-out;
 }
-input:focus {
+.input-field:focus {
   outline: none;
 }
 .btn {
   width: 100%;
+  cursor: pointer;
   padding: 16px 0;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
@@ -98,29 +112,71 @@ input:focus {
   outline: none;
   transition: all 0.4s ease-in-out;
 }
+/* success notification */
+.notification-icon {
+  width: 64px;
+}
 
+.confirmation-text {
+  background-color: #fff;
+  padding: 140px 24px 70px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+.success-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.btn-notification {
+  display: block;
+}
+.input-email {
+  color: var(--darkBlue-color);
+  font-style: 600;
+}
+
+/* third part style for validation */
+/**
+ * Form Validation Errors
+ */
+.error {
+  background-color: #ffdce5;
+  border: 1px solid #ff6155;
+  color: #ff6155;
+}
+@media (max-width: 649px) {
+  .notification-text {
+    margin-bottom: 262px;
+  }
+  .notification {
+    max-width: 420px;
+  }
+}
+/* media queries */
 @media (min-width: 650px) {
-  .form-data {
+  .news-letter-container {
     margin: 0;
     max-width: 630px;
     margin: 50px auto;
     padding: 42px 40px 0px 40px;
     border-radius: 40px;
   }
-
+  .notification {
+    width: 100vw;
+    display: contents;
+  }
   .mid-section {
     padding: 40px 0;
   }
-}
-@media (min-width: 1000px) {
-  .form-data {
-    max-width: 940px;
-    padding: 24px 32px;
-    display: flex;
-    align-items: center;
-    gap: 64px;
-    flex-direction: row-reverse;
-    border-radius: 40px;
+  .confirmation-text {
+    padding: 60px 64px;
+    height: 520px;
+    max-width: 520px;
+    width: 100%;
+    border-radius: 36px;
   }
   body {
     height: 100vh;
@@ -129,7 +185,27 @@ input:focus {
     align-items: center;
     justify-content: center;
   }
-  input:focus ~ .btn {
+}
+@media (min-width: 1000px) {
+  .news-letter-container {
+    max-width: 1000px;
+  }
+  .form-container {
+    max-width: 940px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    flex-direction: row-reverse;
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .input-field:focus ~ .btn {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
   }
+}
+
+.hidden {
+  display: none;
 }
