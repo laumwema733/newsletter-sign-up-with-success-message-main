@@ -207,7 +207,9 @@ label {
     border-radius: 40px;
     transition: all 0.2s ease-in-out;
   }
-
+  main {
+    height: 90vh;
+  }
   .ready {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
   }
