@@ -80,10 +80,10 @@ label {
   font-weight: 700;
   margin-bottom: 8px;
 }
-.error-message {
+.error--message {
   color: #ff527b;
 }
-.input-field {
+.input--field {
   width: 100%;
   padding: 20px;
   line-height: 1.5;

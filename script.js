@@ -4,7 +4,7 @@
 
 const emailInput = document.getElementById("email--input");
 const formEmail = document.getElementById("form");
-const btnSubmit = document.getElementById("btn-submit");
+const btnSubmit = document.getElementById("btn--submit");
 
 function isEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,7 +29,7 @@ emailInput.addEventListener("input", activateBtn);
 
 function handleSubmit(e) {
   e.preventDefault();
-  const errorInput = document.getElementById("error-notification");
+  const errorInput = document.getElementById("error--notification");
 
   const data = Object.fromEntries(new FormData(e.target));
   const { email } = data;
