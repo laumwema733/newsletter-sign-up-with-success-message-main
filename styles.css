@@ -143,7 +143,9 @@ label {
   color: var(--darkBlue-color);
   font-style: 600;
 }
-
+#btn-submit:disabled {
+  opacity: 0.8;
+}
 /* third part style for validation */
 /**
  * Form Validation Errors
@@ -184,7 +186,7 @@ label {
     width: 100%;
     border-radius: 36px;
   }
-  body {
+  main {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -207,13 +209,13 @@ label {
     transition: all 0.2s ease-in-out;
   }
 
-  .input-field:focus ~ .btn {
+  .ready {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
   }
 
-  .btn-notification:active {
+  .btn-notification {
     background-image: linear-gradient(to right, #ff6a3a, #ff527b);
-    box-shadow: 12px 12px 12px #ff527b;
+    box-shadow: 5px 5px 12px #ff527b;
   }
 }
 

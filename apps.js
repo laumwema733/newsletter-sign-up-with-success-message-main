@@ -8,7 +8,7 @@ function handleSubmit(e) {
   const emailInput = document.getElementById("email--input");
 
   const errorInput = document.getElementById("error-notification");
-  const data = Object.fromEntries(new FormData(e.target));
+  const data = Object.fromEntries(new FormData(e.target.trim()));
   if (data.email === "" || !emailRegex.test(data.email)) {
     errorInput.textContent = "Valid email required";
     emailInput.classList.add("error");
@@ -27,10 +27,18 @@ function updateUI(data) {
 }
 
 document.addEventListener("click", (e) => {
-  if (e.target.id === "btn-notification")
-    document.getElementById("notification").classList.add("hidden");
+  if (e.target.id !== "btn-notification") return;
+  document.getElementById("notification").classList.add("hidden");
   document.getElementById("news-letter-container").classList.remove("hidden");
 });
+
+// check input email
+
+function isEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return emailRegex.test(email);
+}
 
 //async
 
@@ -86,21 +94,21 @@ document.addEventListener("click", (e) => {
 //   })
 //   .catch((error) => console.error(`Failed to fetch: ${error}`));
 
-async function fetchProduct() {
-  try {
-    const responses = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
-    );
+// async function fetchProduct() {
+//   try {
+//     const responses = await fetch(
+//       "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+//     );
 
-    if (!responses.ok) {
-      throw new Error(`HTTP error: ${responses.status}`);
-    }
-    const data = await responses.json();
+//     if (!responses.ok) {
+//       throw new Error(`HTTP error: ${responses.status}`);
+//     }
+//     const data = await responses.json();
 
-    console.log(data[0].name);
-  } catch (error) {
-    console.log(`Could not get products: ${error}`);
-  }
-}
+//     console.log(data[0].name);
+//   } catch (error) {
+//     console.log(`Could not get products: ${error}`);
+//   }
+// }
 
-fetchProduct();
+// fetchProduct();
