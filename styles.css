@@ -21,8 +21,8 @@ body {
 }
 .news-letter-container {
   width: 100%;
-  max-width: 500;
-  margin: 50px auto;
+  max-width: 375px;
+  margin: 0 auto;
   position: relative;
 }
 
