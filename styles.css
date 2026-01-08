@@ -55,7 +55,7 @@ li {
 }
 .title,
 .notification-title {
-  font-size: clamp(40px, calc(2vw + 36px), 3.5rem);
+  font-size: clamp(2.5rem, calc(2vw + 2.25rem), 3.5rem);
   color: var(--darkBlue-color);
   font-weight: 700;
 }
