@@ -17,7 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--grey-color);
 
-  width: 100vw;
+  width: 100%;
 }
 .news-letter-container {
   width: 100%;
@@ -174,7 +174,7 @@ label {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   }
   .notification {
-    width: 100vw;
+    width: 100%;
     display: contents;
   }
   .notification-text {
