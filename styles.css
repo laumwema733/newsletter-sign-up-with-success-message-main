@@ -16,16 +16,12 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--grey-color);
-  padding: 20px;
+  padding: 0 20px;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .news-letter-container {
   width: 100%;
   max-width: 500;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   margin: 50px auto;
   position: relative;
 }
@@ -93,9 +89,7 @@ label {
   border: 1px solid var(--grey-color);
   transition: all 0.4s ease-in-out;
 }
-.input-field:focus {
-  outline: none;
-}
+
 .btn {
   width: 100%;
   cursor: pointer;
@@ -128,7 +122,6 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 .success-notification {
   display: flex;
@@ -142,9 +135,7 @@ label {
   color: var(--darkBlue-color);
   font-style: 600;
 }
-#btn-submit:disabled {
-  opacity: 0.8;
-}
+
 /* third part style for validation */
 /**
  * Form Validation Errors
@@ -155,21 +146,29 @@ label {
   color: #ff6155;
 }
 @media (max-width: 649px) {
+  .news-letter-container {
+    margin-top: 0;
+  }
   .notification-text {
     margin-bottom: 262px;
   }
   .notification {
     max-width: 420px;
+    margin-inline: auto;
   }
 }
 /* media queries */
 @media (min-width: 650px) {
+  .confirmation-text {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
   .news-letter-container {
     margin: 0;
     max-width: 630px;
     margin: 50px auto;
     padding: 42px 40px 0px 40px;
     border-radius: 40px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   }
   .notification {
     width: 100vw;
