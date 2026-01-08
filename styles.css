@@ -196,9 +196,10 @@ label {
 @media (min-width: 1000px) {
   .news-letter-container {
     max-width: 1000px;
+    padding: 0;
   }
   .form-container {
-    max-width: 940px;
+    width: 100%;
     padding: 24px 32px;
     display: flex;
     align-items: center;
