@@ -57,6 +57,7 @@ li {
 .notification-title {
   font-size: clamp(40px, calc(2vw + 36px), 3.5rem);
   color: var(--darkBlue-color);
+  font-weight: 700;
 }
 .mid-section {
   padding: 2.5em 1.5em;
@@ -160,7 +161,7 @@ label {
   }
 }
 /* media queries */
-@media (min-width: 40.62rem) {
+@media (min-width: 40.75rem) {
   .confirmation-text {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   }
@@ -176,6 +177,9 @@ label {
     width: 100vw;
     display: contents;
   }
+  .notification-text {
+    margin-bottom: 0;
+  }
   .mid-section {
     padding: 2.5em 0;
   }
@@ -187,8 +191,8 @@ label {
     border-radius: 36px;
   }
   main {
-    min-height: 100vh;
     width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
