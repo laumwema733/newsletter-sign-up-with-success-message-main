@@ -89,7 +89,10 @@ label {
   border: 1px solid var(--grey-color);
   transition: all 0.4s ease-in-out;
 }
-
+.input--field:focus {
+  border: 2px solid var(--grey-color);
+  outline: 0;
+}
 .btn {
   width: 100%;
   cursor: pointer;
