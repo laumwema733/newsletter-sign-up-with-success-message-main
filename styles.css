@@ -168,7 +168,7 @@ label {
   .news-letter-container {
     margin: 0;
     max-width: 40rem;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 2.62em 2.5em 0px 2.5em;
     border-radius: 40px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
@@ -192,7 +192,7 @@ label {
   }
   main {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
