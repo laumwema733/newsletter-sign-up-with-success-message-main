@@ -1,44 +1,44 @@
-"use strict";
+// "use strict";
 
-document.getElementById("form").addEventListener("submit", handleSubmit);
+// document.getElementById("form").addEventListener("submit", handleSubmit);
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const emailInput = document.getElementById("email--input");
+// function handleSubmit(e) {
+//   e.preventDefault();
+//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   const emailInput = document.getElementById("email--input");
 
-  const errorInput = document.getElementById("error-notification");
-  const data = Object.fromEntries(new FormData(e.target.trim()));
-  if (data.email === "" || !emailRegex.test(data.email)) {
-    errorInput.textContent = "Valid email required";
-    emailInput.classList.add("error");
-  } else {
-    errorInput.textContent = "";
-    emailInput.classList.remove("error");
-    emailInput.value = "";
-    updateUI(data.email);
-  }
-}
+//   const errorInput = document.getElementById("error-notification");
+//   const data = Object.fromEntries(new FormData(e.target.trim()));
+//   if (data.email === "" || !emailRegex.test(data.email)) {
+//     errorInput.textContent = "Valid email required";
+//     emailInput.classList.add("error");
+//   } else {
+//     errorInput.textContent = "";
+//     emailInput.classList.remove("error");
+//     emailInput.value = "";
+//     updateUI(data.email);
+//   }
+// }
 
-function updateUI(data) {
-  document.getElementById("news-letter-container").classList.add("hidden");
-  document.getElementById("notification").classList.remove("hidden");
-  document.getElementById("input-email").textContent = data;
-}
+// function updateUI(data) {
+//   document.getElementById("news-letter-container").classList.add("hidden");
+//   document.getElementById("notification").classList.remove("hidden");
+//   document.getElementById("input-email").textContent = data;
+// }
 
-document.addEventListener("click", (e) => {
-  if (e.target.id !== "btn-notification") return;
-  document.getElementById("notification").classList.add("hidden");
-  document.getElementById("news-letter-container").classList.remove("hidden");
-});
+// document.addEventListener("click", (e) => {
+//   if (e.target.id !== "btn-notification") return;
+//   document.getElementById("notification").classList.add("hidden");
+//   document.getElementById("news-letter-container").classList.remove("hidden");
+// });
 
-// check input email
+// // check input email
 
-function isEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// function isEmail(email) {
+//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  return emailRegex.test(email);
-}
+//   return emailRegex.test(email);
+// }
 
 //async
 
